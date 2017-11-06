@@ -76,7 +76,7 @@ void rcFilterLowHangingWalkableObstacles(rcContext* ctx, const int walkableClimb
 /// This method removes the impact of the overestimation of conservative voxelization 
 /// so the resulting mesh will not have regions hanging in the air over ledges.
 /// 
-/// A span is a ledge if: <tt>rcAbs(currentSpan.smax - neighborSpan.smax) > walkableClimb</tt>
+/// A span is a ledge if: <tt> currentSpan.smax - neighborSpan.smax > walkableClimb</tt>
 /// 
 /// @see rcHeightfield, rcConfig
 void rcFilterLedgeSpans(rcContext* ctx, const int walkableHeight, const int walkableClimb,
